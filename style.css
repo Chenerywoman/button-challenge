@@ -1,0 +1,374 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrapper{
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    align-content: stretch;
+    height: 100vh;
+    flex-wrap:wrap;
+}
+
+.box {
+    color: paleturquoise;
+    background-color: paleturquoise;
+    font-size: 100px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-align: center;
+    padding:15px;
+    width: 33.33%;
+    height: 33.33%;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+}
+
+
+/* styling & animation of twitter button*/
+
+/*Need to set this as the color to start with on the i element as the :link pseudo property doesn't work on the a tag as it is an i element inside, not text*/
+.fa-twitter{
+    text-decoration: none;
+    font-size: 150%; 
+    color:#003d99;
+}
+
+.fa-twitter-square{
+    text-decoration: none;
+    font-size: 150%; 
+    color:#003d99;
+}
+
+#twitter_link:visited .fa-twitter{
+    color:#e6b800;
+}
+
+/* this allows you to target the i element (class .fa-twitter) inside the a tag (id of twitter-link) */
+#twitter_link:visited .fa-twitter{
+    color: #e6b800;
+}
+
+/* this allows you to target the i element (class .fa-twitter-square) inside the a tag (id of twitter-link) */
+#twitter_link:visited .fa-twitter-square{
+    color: #e6b800;
+}
+
+#twitter_link:hover .fa-twitter,
+#twitter_link .fa-twitter-square{
+    display: none;
+}
+#twitter_link:hover .fa-twitter-square{
+    display: inline;
+} 
+
+#twitter_link:active{
+    color: white;
+}
+
+/* styling & animation of website button*/
+#web_link{
+    width: 85%;
+    height: 85%;
+    border-radius: 50%;
+    box-shadow: 6px 6px 6px #66b0ff;
+    padding: 10%;
+    background-color: white; 
+}
+
+#web_link:link{
+    background-color: white; 
+} 
+
+#web_link:visited{
+    background-color:  #e0cf8c; 
+} 
+
+#web_link:hover{
+    animation-name: weblink-animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+#web_link:active{
+    background-color: #003d99; 
+} 
+
+@keyframes weblink-animation{
+    0% {
+        background-color: #003d99;
+    }
+
+    50%{
+        background-color: #e2cb70;
+    }
+
+    100%{
+        background-color: white;
+    }
+}
+
+/* styling of code nation logo*/
+
+#cnLogo_long{
+    width: 100%;
+    height: 30%;
+    border-radius: 5%;
+}
+
+
+#cnLogo_long:hover{
+    animation-name: cnLogo-animation;
+    animation-duration:5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cnLogo-animation{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        background-color: white;
+    }
+    25%{
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        background-color: whitesmoke;
+    }
+
+    50%{
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        background-color: paleturquoise;
+    }
+
+    75%{
+        -webkit-transform: rotate(270deg);
+        transform: rotate(270deg);
+        background-color:turquoise;
+    }
+
+    100%{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        background-color:darkturquoise;
+    }
+}
+
+
+/* styling & animation of instagram button*/
+
+.fa-instagram{
+    border-radius: 10%;
+    box-shadow: 6px 6px 6px #66b0ff;
+    font-size: 150%;
+    color: #003d99;
+
+}
+
+#instagram_link:link .fa-instagram{
+    color: #003d99;
+}
+
+#instagram_link:visited .fa-instagram{
+    color: #e6b800;
+}
+
+@keyframes instagram-animation{
+    0% {
+        font-size: 175px;
+    }
+
+    50%{
+        font-size: 150px;
+    }
+
+    100%{
+        font-size: 100px;
+    }
+}
+
+.fa-instagram:hover {
+    animation-name: instagram-animation;
+    animation-duration: 4s;
+}
+
+#instagram_link:active .fa-instagram{
+    color: white;
+}
+
+/* link to more page*/
+
+#more:link{
+    text-decoration: none;
+    font-size: 75%;
+    color: #003d99;
+}
+
+#more:visited{
+    text-decoration: none;
+    color: #e6b800;
+}
+
+#more:hover{
+    color:blue;
+} 
+
+#more:active{
+    text-decoration: none;
+    color: white;
+} 
+
+/* styling & animation of facebook button*/
+
+.fa-facebook{
+    font-size: 150%;
+}
+
+#facebook_link:link .fa-facebook{
+    color: #003d99;
+}
+
+#facebook_link:visited .fa-facebook{
+    color: #e6b800;
+}
+
+.fa-facebook:hover{
+    animation-name: facebook-animation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes facebook-animation{
+    0%{
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+    25%{
+        -webkit-transform: scaleX(-0.25);
+        transform: scaleX(-0.25);
+    }
+
+    50%{
+        -webkit-transform: scaleX(-0.5);
+        transform: scaleX(-0.5);
+    }
+
+    75%{
+        -webkit-transform: scaleX(-0.75);
+        transform: scaleX(-0.75);
+    }
+
+    100%{
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+    }
+}
+
+#facebook_link:active .fa-facebook{
+    color: white;
+}
+
+/* i-pads & tablets */
+@media only screen and (max-width: 768px){
+
+    .box {
+        width: 50%;
+        align-items: center;
+    }
+
+    #box2, #box4, #box6{
+        display: none;
+    }
+
+    #cnLogo_short{
+        width: 75%;
+        height: 75%;
+    }
+
+    #cnLogo_long{
+        width: 90%;
+        height: 30%;
+
+    }
+
+    .fa-instagram{
+        box-shadow: 3px 3px 3px #66b0ff;
+        font-size: 100%;
+    
+    } 
+    
+    #more, #more:visited{
+        text-decoration: none;
+        font-size: 50%;
+    }
+
+    .fa-facebook{
+        margin-top: 5%;
+        font-size: 75%;
+    }  
+
+}
+
+/* mobile phone size */
+
+@media only screen and (max-width: 500px){
+
+    .box {
+
+        width: 100%;
+    }
+
+    #box2, #box4, #box6{
+
+        display: none;
+    }
+
+    .fa-twitter{
+        font-size: 100%;
+    }
+    
+    .fa-twitter-square{
+        font-size: 100%;
+    }
+
+    #weblink{
+        width: 50%;
+        height: 50%;
+        border-radius: 0%;
+        padding: 0;
+    }
+
+    #cnLogo_short{
+        width: 100%;
+        height: 100%;
+        border-radius: 0%;
+    }
+
+    #cnLogo_long{
+        width: 80%;
+        height: 30%;
+    }
+
+    .fa-instagram{
+        box-shadow: 3px 3px 3px #66b0ff;
+        font-size: 100%;
+    
+    } 
+    
+    #more, #more:visited{
+        font-size: 50%;
+    }
+
+    .fa-facebook{
+        font-size: 100%;
+    }
+
+}
+
+
+
+
+

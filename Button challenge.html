@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://127.0.0.1:5500/main.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+
+    <title>Button challenge</title>
+<link rel="stylesheet" href="./Button challenge_files/font-awesome.min.css"><link rel="stylesheet" href="./Button challenge_files/style.css"></head>
+
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="box" id="twitter_box">
+                <a href="https://twitter.com/wearecodenation?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" id="twitter_link">
+                    <i class="fa fa-twitter"></i> 
+                    <i class="fa fa-twitter-square"></i>
+                </a>
+            </div>
+            <div class="box" id="box2">
+                Box 2
+            </div>
+            <div class="box" id="website_box">
+                <a href="https://wearecodenation.com/" id="weblink">
+                <img src="./Button challenge_files/short-logo.svg" alt="CN short logo" id="cnLogo_short">
+                </a>
+            </div>
+            <div class="box" id="box4">
+                Box4
+            </div>
+            <div class="box" id="code_nation_box">
+                    <img src="./Button challenge_files/cnLogo.png" alt="CN long logo" id="cnLogo_long">
+            </div>
+            <div class="box" id="box6">
+                Box 6
+            </div>
+            <div class="box" id="instagram_box"> 
+                <a href="https://www.instagram.com/wearecodenation/?hl=en" id="instagram_link">
+                    <i class="fa fa-instagram"></i>
+                </a>
+            </div>
+            <div class="box" id="more_box">
+                <a href="http://127.0.0.1:5500/more.html" id="more">more...</a>
+            </div>
+            <div class="box" id="facebook_box">
+                <a href="https://www.facebook.com/wearecodenation/" id="facebook_link">
+                    <i class="fa fa-facebook"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body></html>

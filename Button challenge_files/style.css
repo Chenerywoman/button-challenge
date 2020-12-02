@@ -1,0 +1,347 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrapper{
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    align-content: stretch;
+    height: 100vh;
+    flex-wrap:wrap;
+}
+
+.box {
+    color: paleturquoise;
+    background-color: paleturquoise;
+    font-size: 100px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    text-align: center;
+    padding:15px;
+    width: 33.33%;
+    height: 33.33%;
+    display: flex; 
+    align-items: center;
+    justify-content: center; 
+}
+
+
+/* styling & animation of twitter button*/
+
+/* .fa-twitter{
+    font-size: 150%;
+}
+
+.fa-twitter-square{
+    font-size: 150%;
+} */
+
+#twitter_link:hover .fa-twitter,
+#twitter_link .fa-twitter-square{
+    display: none;
+}
+#twitter_link:hover .fa-twitter-square{
+    display: inline;
+} 
+
+#twitter_link:link{
+    color: #003d99;
+    font-size: 150%;
+}
+
+#twitter_link:active{
+    color: white;
+}
+
+#twitter_link:visited{
+    color: #e6b800;
+}
+
+
+/* styling & animation of website button*/
+#weblink{
+    width: 85%;
+    height: 85%;
+    border-radius: 50%;
+    box-shadow: 6px 6px 6px #66b0ff;
+    padding: 10%;
+}
+
+#weblink:link{
+    background-color: white; 
+} 
+
+#weblink:visited{
+    background-color:  #e0cf8c; 
+} 
+
+#weblink:hover{
+    width: 50%;
+    height: 50%;
+    border-radius: 0%;
+    box-shadow: 6px 6px 6px #66b0ff;
+    padding: 3%;
+}
+
+#weblink:active{
+    background-color: #003d99; 
+} 
+
+/* styling of code nation logo*/
+
+#cnLogo_long{
+    width: 100%;
+    height: 30%;
+    border-radius: 5%;
+}
+
+
+#cnLogo_long:hover{
+    animation-name: cnLogo-animation;
+    animation-duration:5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cnLogo-animation{
+    0%{
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        background-color: white;
+    }
+    25%{
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+        background-color: whitesmoke;
+    }
+
+    50%{
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+        background-color: paleturquoise;
+    }
+
+    75%{
+        -webkit-transform: rotate(270deg);
+        transform: rotate(270deg);
+        background-color:turquoise;
+    }
+
+    100%{
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+        background-color:darkturquoise;
+    }
+}
+
+
+/* styling & animation of instagram button*/
+
+.fa-instagram{
+    border-radius: 10%;
+    box-shadow: 6px 6px 6px #66b0ff;
+    font-size: 150%;
+}
+
+.fa-instagram:hover{
+    animation-name: instagram-animation;
+    animation-duration: 4s;
+}
+
+@keyframes instagram-animation{
+    0% {
+        /* color: #e2c03b; */
+        color: #003d99;
+        font-size: 175px;
+    }
+
+    50%{
+        color: #e2cb70;
+        font-size: 150px;
+    }
+
+    100%{
+        color: #e4d6a1;
+        font-size: 100px;
+    }
+}
+
+#instagram_link:link{
+    color: #003d99;
+}
+
+#instagram_link:active{
+    color: white;
+}
+
+#instagram_link:visited{
+    color: #e6b800;
+}
+
+/* link to more page*/
+
+#more{
+    color: #003d99;
+    text-decoration: none;
+    font-size: 75%;
+}
+
+#more:visited{
+    text-decoration: none;
+    color: #e6b800;
+}
+
+#more:active{
+    text-decoration: none;
+    color: white;
+}
+
+/* styling & animation of facebook button*/
+
+.fa-facebook{
+    font-size: 150%;
+}
+
+.fa-facebook:hover{
+    animation-name: facebook-animation;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes facebook-animation{
+    0%{
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+    25%{
+        -webkit-transform: scaleX(-0.25);
+        transform: scaleX(-0.25);
+    }
+
+    50%{
+        -webkit-transform: scaleX(-0.5);
+        transform: scaleX(-0.5);
+    }
+
+    75%{
+        -webkit-transform: scaleX(-0.75);
+        transform: scaleX(-0.75);
+    }
+
+    100%{
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+    }
+}
+
+#facebook_link:link{
+    color: #003d99;
+}
+
+#facebook_link:active{
+    color: white;
+}
+
+#facebook_link:visited{
+    color: #e6b800;
+}
+
+/* i-pads & tablets */
+@media only screen and (max-width: 768px){
+
+    .box {
+        width: 50%;
+        align-items: center;
+    }
+
+    #box2, #box4, #box6{
+        display: none;
+    }
+
+    #cnLogo_short{
+        width: 75%;
+        height: 75%;
+        box-shadow: 4px 4px 4px #66b0ff;
+    }
+
+    #cnLogo_long{
+        width: 90%;
+        height: 30%;
+
+    }
+
+    .fa-instagram{
+        box-shadow: 3px 3px 3px #66b0ff;
+        font-size: 100%;
+    
+    } 
+    
+    #more, #more:visited{
+        text-decoration: none;
+        font-size: 50%;
+    }
+
+    .fa-facebook{
+        margin-top: 5%;
+        font-size: 75%;
+    }
+    
+
+}
+
+/* mobile phone size */
+
+@media only screen and (max-width: 500px){
+
+    .box {
+
+        width: 100%;
+    }
+
+    #box2, #box4, #box6{
+
+        display: none;
+    }
+
+    .fa-twitter{
+        font-size: 100%;
+    }
+    
+    .fa-twitter-square{
+        font-size: 100%;
+    }
+
+    #cnLogo_short{
+        width: 50%;
+        height: 50%;
+        box-shadow: 3px 3px 3px #66b0ff;
+    }
+
+    #cnLogo_long{
+        width: 80%;
+        height: 30%;
+    }
+
+    .fa-instagram{
+        box-shadow: 3px 3px 3px #66b0ff;
+        font-size: 100%;
+    
+    } 
+    
+    #more, #more:visited{
+        font-size: 50%;
+    }
+
+    .fa-facebook{
+        font-size: 100%;
+    }
+    
+
+
+}
+
+
+
+
+
