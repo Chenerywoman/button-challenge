@@ -18,3 +18,7 @@ The project brief was to create an html page:
     - a different animation on each one on hover
     - a change of colour when clicked and after visited
     - a background image with at least two animations
+
+I completed the challenge using two linked pages:
+* The first page has the Code Nation logo and the four other buttons
+* The second page has a background image with two animations
